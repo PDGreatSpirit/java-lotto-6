@@ -21,4 +21,5 @@ public class Lotto {
         this.bonusNumber = bonusNumber;
     }
 
+
 }
