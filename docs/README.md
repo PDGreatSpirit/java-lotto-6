@@ -6,3 +6,24 @@
    4. 당첨은 1등 2등 3등 4등 5등이 있다
 2. lotto 주의 사항
    1. 사용자의 입력을 처리하는것이 아닌 비교를 해서 결과를 입력 해주는 위치다
+
+
+
+
+
+
+
+구현 로드맵 
+1.  로또 당첨 클래스 유효성 검사 구현 ( LottoVauldate class)
+   1. 로또 번호 ( 보너스 번호를 제외 )
+      1. 로또의 갯수를 검사하는 validateSize() 구현
+      2. 로또의 중복을 검사하는 validateDuplication() 구현 
+      3. 로또의 범위를 검사하는 validateRange() 구현
+      * 갯수 중복 범위를 표현하는 상수 SIZE MAX_RANGE MIN_RANGE 
+   2. 보너스 번호
+      1. 보너스 번호의 중복을 검사하는 validateDupBounsNumber()
+      2. 보너스 번호의 범위를 검사하는 validateRangeBounsNumber()
+   3. 테스트 코드 추가
+      4. 위 내용들을 테스트하는 코드 추가 작성 ( 보너스 번호 관련 )
+2. 로또 당첨 번호 입력을 받고 생성하는 클래스 생성
+      
