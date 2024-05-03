@@ -22,6 +22,7 @@ public class Person {
     public String rateOfReturn(){
         if(lottoTickets == 0) return "0.00";
         double rate = (double) reward / money;
-        return String.format("%.2f",rate);
+        rate = rate * 100;
+        return String.format("%.1f",rate);
     }
 }

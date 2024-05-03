@@ -1,13 +1,15 @@
 package lotto;
 
+import java.text.DecimalFormat;
+
 public enum Prices {
     NONE(0, 0),
     FIFTH(5_000 , 3 ),
     FOURTH(50_000 , 4),
-    THIRD(1_500_00 , 5),
+    THIRD(1_500_000 , 5),
     SECOND(30_000_000 , 5),
     FIRST(2_000_000_000 , 6);
-
+    DecimalFormat df = new DecimalFormat("###,###");
     private final int price;
     private final int hit;
 
@@ -23,10 +25,10 @@ public enum Prices {
     @Override
     public String toString() {
         if (this.price == SECOND.price)
-            return hit +"개 일치, 보너스 볼 일치("
-                +price+ "원) - ";
+            return hit +"개 일치, 보너스 볼 일치 ("
+                +df.format(price)+ "원) - ";
         return hit +"개 일치 ("
-                +price+ "원) - ";
+                +df.format(price)+ "원) - ";
     }
 
     public static Prices valueOf(int matchCount, boolean matchBonus) {
